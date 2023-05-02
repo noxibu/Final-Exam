@@ -1,6 +1,7 @@
 ﻿using Final_Exam___Sales_Management_System.DTOs;
 using Final_Exam___Sales_Management_System.Entities;
 using Final_Exam___Sales_Management_System.Repositories;
+using System.Drawing;
 
 namespace Final_Exam___Sales_Management_System.Services
 {
@@ -34,7 +35,9 @@ namespace Final_Exam___Sales_Management_System.Services
             };
             return await _imageRepository.AddAsync(id, image);
         
-    }
+        }
+
+
         public ImageDto GetImage(Guid userId)
         {
             var userInformation = _userInformationRepository.GetUserInfo(userId);
